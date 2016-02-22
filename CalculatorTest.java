@@ -90,7 +90,12 @@ public class CalculatorTest {
 	 * This method verify if the history is been shown correctly
 	 */
 	public void testHistory(){
-		fail();
+		Calculator number = new Calculator();
+		number.add(1);
+		number.subtract(3);
+		number.multiply(8);
+		number.divide(2);
+		assertEquals(number.getHistory(), "0 + 1 - 3 * 8 / 2");
 	}
 
 }

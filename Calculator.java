@@ -12,12 +12,14 @@ package cse360assign3;
 * Description: This class simulate a calculator.
 */
 
-public class Calculator
-{
-private int total;
+public class Calculator {
+	
+	private int total;
+	private String history;
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/**
@@ -34,6 +36,7 @@ private int total;
 	 */
 	public void add (int value) {
 		total += value;
+		history += " + " + value;
 	}
 	
 	/**
@@ -42,6 +45,7 @@ private int total;
 	 */
 	public void subtract (int value) {
 		total -= value;
+		history += " - " + value;
 	}
 	
 	/**
@@ -50,6 +54,7 @@ private int total;
 	 */
 	public void multiply (int value) {
 		total *= value;
+		history += " * " + value;
 	}
 	
 	/**
@@ -63,6 +68,8 @@ private int total;
 		
 		else
 			total /= value;
+		
+		history += " / " + value;
 	}
 	
 	/**
@@ -70,7 +77,7 @@ private int total;
 	 * @return history
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 	
 }
