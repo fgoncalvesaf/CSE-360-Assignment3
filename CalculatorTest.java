@@ -32,7 +32,10 @@ public class CalculatorTest {
 	 * This method verify if the total is correct
 	 */
 	public void testTotal(){
-		fail();
+		Calculator number = new Calculator();
+		number.add(10);
+		number.multiply(2);
+		assertEquals(number.getTotal(), 20);
 	}
 	
 	@Test
@@ -40,7 +43,10 @@ public class CalculatorTest {
 	 * This method verify if a value is been added correctly
 	 */
 	public void testAdd(){
-		fail();
+		Calculator number = new Calculator();
+		number.add(10);
+		number.add(2);
+		assertEquals(number.getTotal(), 12);
 	}
 	
 	@Test
@@ -48,7 +54,10 @@ public class CalculatorTest {
 	 * This method verify if a value is been subtracted correctly
 	 */
 	public void testSubtract(){
-		fail();
+		Calculator number = new Calculator();
+		number.add(10);
+		number.subtract(2);
+		assertEquals(number.getTotal(), 8);
 	}
 	
 	@Test
@@ -56,7 +65,10 @@ public class CalculatorTest {
 	 * This method verify if the total is been multiplied correctly
 	 */
 	public void testMultiply(){
-		fail();
+		Calculator number = new Calculator();
+		number.add(10);
+		number.multiply(3);
+		assertEquals(number.getTotal(), 30);
 	}
 	
 	@Test
@@ -64,7 +76,13 @@ public class CalculatorTest {
 	 * This method verify if the total is been divided correctly
 	 */
 	public void testDivide(){
-		fail();
+		Calculator number = new Calculator();
+		number.add(10);
+		number.divide(2);
+		assertEquals(number.getTotal(), 5);
+		
+		number.divide(0);
+		assertEquals(number.getTotal(), 0);
 	}
 	
 	@Test
